@@ -1,12 +1,17 @@
 # 📝 To-Do App
 
+Eine einfache To-Do-Applikation mit **Django REST Framework** im Backend und **React + TypeScript + Tailwind CSS** im Frontend.  
+Sie ermöglicht das Erstellen, Anzeigen, Bearbeiten und Löschen von Aufgaben – inklusive Such- und Filterfunktion.
+
+---
+
 ## 🚀 Tech Stack
 
 ### **Backend**
 - 🐍 [Python](https://www.python.org/)
 - ⚙️ [Django](https://www.djangoproject.com/)
 - 🧩 [Django REST Framework](https://www.django-rest-framework.org/)
-- 🗄️ SQLite 
+- 🗄️ SQLite (Standarddatenbank für Entwicklung)
 
 ### **Frontend**
 - ⚛️ [React](https://react.dev/)
@@ -16,12 +21,13 @@
 ---
 
 ## 🎯 Features
-- **Create:** Neue Aufgaben hinzufügen  
-- **Read:** Aufgabenliste anzeigen  
-- **Update:** Bestehende Aufgaben bearbeiten  
-- **Delete:** Aufgaben löschen
-- 🔍 Suchfunktion  
-- ⚙️ Filter
+
+- ✨ **Create:** Neue Aufgaben hinzufügen  
+- 👀 **Read:** Aufgabenliste anzeigen  
+- 🛠️ **Update:** Bestehende Aufgaben bearbeiten  
+- ❌ **Delete:** Aufgaben löschen  
+- 🔍 **Suchfunktion** zum schnellen Finden von Aufgaben  
+- ⚙️ **Filteroptionen** nach Status oder anderen Kriterien  
 
 ---
 
@@ -40,13 +46,15 @@
 ## ⚙️ Installation & Setup
 
 ### **1️⃣ Backend Setup**
+
+```bash
 # Repository klonen
-git clone [https://github.com/<your-username>/<your-repo>.git](https://github.com/KittyVu/To-Do-Applikation.git)
+git clone https://github.com/KittyVu/To-Do-Applikation.git
 cd To-Do-Applikation/backend
 
 # Virtuelle Umgebung erstellen
 python -m venv venv
-source venv/bin/activate 
+source venv/bin/activate  # (Windows: venv\Scripts\activate)
 
 # Abhängigkeiten installieren
 pip install -r requirements.txt
@@ -57,7 +65,11 @@ python manage.py migrate
 # Server starten
 python manage.py runserver
 
-### **1️⃣ Frontend Setup**
+Der Backend-Server läuft standardmäßig auf:
+👉 http://127.0.0.1:8000/
+```
+### **2️⃣ Frontend Setup**
+```bash
 cd ../frontend
 
 # Abhängigkeiten installieren
@@ -65,4 +77,13 @@ npm install
 
 # Entwicklungsserver starten
 npm run dev
+
+Der Frontend-Server läuft standardmäßig auf:
+👉 http://localhost:5173/ (oder ähnlich je nach Setup)
+```
+
+👩‍💻 Autor
+XuyenVu
+📧 kittyvu@example.com
+🌐 github.com/KittyVu
 
