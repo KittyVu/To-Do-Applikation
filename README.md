@@ -54,7 +54,7 @@ cd To-Do-Applikation/backend
 
 # Virtuelle Umgebung erstellen
 python -m venv venv
-source venv/bin/activate  # (Windows: venv\Scripts\activate)
+source venv/bin/activate  
 
 # Abhängigkeiten installieren
 pip install -r requirements.txt
@@ -79,11 +79,11 @@ npm install
 npm run dev
 
 Der Frontend-Server läuft standardmäßig auf:
-👉 http://localhost:5173/ (oder ähnlich je nach Setup)
+👉 http://localhost:5173/ 
 ```
 
 ## 👩‍💻 Autor
 ### XuyenVu
-- 📧 kittyvu@example.com
-- 🌐 github.com/KittyVu
+- 📧 asthrough@gmail.com
+- 🌐 [github.com/KittyVu](https://github.com/KittyVu)
 
