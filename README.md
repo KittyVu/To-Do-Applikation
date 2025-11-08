@@ -11,7 +11,7 @@ Sie ermöglicht das Erstellen, Anzeigen, Bearbeiten und Löschen von Aufgaben �
 - 🐍 [Python](https://www.python.org/)
 - ⚙️ [Django](https://www.djangoproject.com/)
 - 🧩 [Django REST Framework](https://www.django-rest-framework.org/)
-- 🗄️ SQLite (Standarddatenbank für Entwicklung)
+- 🗄️ SQLite 
 
 ### **Frontend**
 - ⚛️ [React](https://react.dev/)
@@ -82,8 +82,8 @@ Der Frontend-Server läuft standardmäßig auf:
 👉 http://localhost:5173/ (oder ähnlich je nach Setup)
 ```
 
-👩‍💻 Autor
-XuyenVu
-📧 kittyvu@example.com
-🌐 github.com/KittyVu
+## 👩‍💻 Autor
+### XuyenVu
+- 📧 kittyvu@example.com
+- 🌐 github.com/KittyVu
 
