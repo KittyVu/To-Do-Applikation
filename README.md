@@ -83,7 +83,7 @@ Der Frontend-Server läuft standardmäßig auf:
 ```
 
 ## 👩‍💻 Autor
-### XuyenVu
+### Xuyen Vu
 - 📧 asthrough@gmail.com
 - 🌐 [github.com/KittyVu](https://github.com/KittyVu)
 
