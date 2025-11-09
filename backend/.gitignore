@@ -1,0 +1,78 @@
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# =====================
+# Virtual environments
+# =====================
+venv/
+env/
+ENV/
+.venv/
+
+# =====================
+# Django
+# =====================
+# Django database file (if using sqlite)
+db.sqlite3
+
+# Django media (user uploads)
+media/
+
+# Django staticfiles (collected)
+staticfiles/
+
+# Django logs
+*.log
+
+# Django migrations cache
+*/migrations/*.py[cod]
+*/migrations/__pycache__/
+
+# Environment variables
+*.env
+
+# =====================
+# IDEs / Editors
+# =====================
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Sublime Text
+*.sublime-workspace
+
+# =====================
+# OS generated files
+# =====================
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
