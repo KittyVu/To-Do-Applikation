@@ -1,36 +1,36 @@
-import React from "react";
+import { useState } from "react";
+import { useTasksContext } from "../context/TaskContext";
 
-interface TaskFormProps {
-  titel: string;
-  beschreibung: string;
-  onTitelChange: (v: string) => void;
-  onBeschreibungChange: (v: string) => void;
-  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-}
+export default function TaskForm() {
+  const { addTask } = useTasksContext();
+  const [titel, setTitel] = useState("");
+  const [beschreibung, setBeschreibung] = useState("");
+  const [status, setStatus] = useState("offen");
 
-export default function TaskForm({
-  titel,
-  beschreibung,
-  onTitelChange,
-  onBeschreibungChange,
-  onSubmit,
-}: TaskFormProps) {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    addTask(titel, beschreibung, status);
+    setTitel("");
+    setBeschreibung("");
+    setStatus("offen");
+  };
+
   return (
-    <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-2 mb-6">
+    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 mb-6">
       <input
         type="text"
         placeholder="Add new task..."
         value={titel}
-        onChange={(e) => onTitelChange(e.target.value)}
+        onChange={(e) => setTitel(e.target.value)}
         required
-        className="px-4 py-2 bg-[#F0F0F0] text-blue-600 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 flex-1"
+        className="flex-1 px-4 py-2 bg-[#F0F0F0] text-blue-600 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
       />
       <input
         type="text"
         placeholder="Add Beschreibung..."
         value={beschreibung}
-        onChange={(e) => onBeschreibungChange(e.target.value)}
-        className="px-4 py-2 bg-[#F0F0F0] text-blue-800 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 flex-1"
+        onChange={(e) => setBeschreibung(e.target.value)}
+        className="flex-1 px-4 py-2 bg-[#F0F0F0] text-blue-800 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
       />
       <button
         type="submit"
@@ -41,4 +41,3 @@ export default function TaskForm({
     </form>
   );
 }
-
