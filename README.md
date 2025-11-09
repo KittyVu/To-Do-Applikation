@@ -36,10 +36,10 @@ Sie ermöglicht das Erstellen, Anzeigen, Bearbeiten und Löschen von Aufgaben �
 | Methode | Endpoint | Beschreibung | Statuscodes |
 |----------|-----------|---------------|--------------|
 | **GET** | `/api/todos/` | Liste aller To-Dos | 200 |
-| **POST** | `/api/todos/` | Neues To-Do erstellen | 201, 400 |
-| **GET** | `/api/todos/<id>/` | Einzelnes To-Do abrufen | 200, 404 |
-| **PUT** | `/api/todos/<id>/` | To-Do vollständig aktualisieren | 200, 400, 404 |
-| **DELETE** | `/api/todos/<id>/` | To-Do löschen | 204, 404 |
+| **POST** | `/api/todos/` | Neues To-Do erstellen | 201 |
+| **GET** | `/api/todos/<id>/` | Einzelnes To-Do abrufen | 200 |
+| **PUT** | `/api/todos/<id>/` | To-Do vollständig aktualisieren | 404 |
+| **DELETE** | `/api/todos/<id>/` | To-Do löschen | 204 |
 
 ---
 
@@ -53,11 +53,12 @@ git clone https://github.com/KittyVu/To-Do-Applikation.git
 cd To-Do-Applikation/backend
 
 # Virtuelle Umgebung erstellen
-python -m venv venv
+python3 -m venv .venv
 source venv/bin/activate  
 
 # Abhängigkeiten installieren
-pip install -r requirements.txt
+pip install django django-cors-headers 
+
 
 # Datenbankmigrationen ausführen
 python manage.py migrate
