@@ -1,6 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import type { TaskType } from "../utils/type";
-import type { ReactNode } from "react";
 import type { TasksContextType } from "../utils/type";
 
 const TasksContext = createContext<TasksContextType | undefined>(undefined);
@@ -11,7 +10,7 @@ export const useTasksContext = () => {
   return context;
 };
 
-export const TasksProvider = ({ apiUrl, children }: { apiUrl: string; children: ReactNode }) => {
+export const TasksProvider = ({ apiUrl, children }: { apiUrl: string; children: React.ReactNode }) => {
   const [tasks, setTasks] = useState<TaskType[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filterStatus, setFilterStatus] = useState("");

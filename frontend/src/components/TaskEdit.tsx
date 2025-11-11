@@ -11,12 +11,13 @@ export default function TaskEdit() {
     editStatus,
     setEditStatus,
     updateTask,
-  } = useTasksContext();
+  } = useTasksContext();  // get from Context
 
   if (!editingTask) return null;
 
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
+    // get this function from Context
     updateTask(editingTask.id!, {
       titel: editTitel,
       beschreibung: editBeschreibung,
@@ -35,7 +36,7 @@ export default function TaskEdit() {
   return (
     <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-50 p-4">
       <div className="bg-white rounded-xl shadow-lg p-6 w-full sm:w-120 relative">
-        <h2 className="text-xl font-semibold text-blue-600 text-center mb-4">Edit Task</h2>
+        <h2 className="text-xl font-semibold text-blue-600 text-center mb-4">Aufgabe bearbeiten</h2>
         <form onSubmit={handleSave} className="flex flex-col gap-3">
           <input
             type="text"
@@ -72,10 +73,10 @@ export default function TaskEdit() {
 
           <div className="flex flex-col sm:flex-row gap-3 mt-4">
             <button type="submit" className="flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition cursor-pointer">
-              Save Changes
+              Speichern
             </button>
             <button type="button" onClick={handleCancel} className="flex-1 bg-gray-300 text-gray-800 py-2 rounded-lg hover:bg-gray-400 transition cursor-pointer">
-              Cancel
+              Stornieren
             </button>
           </div>
         </form>

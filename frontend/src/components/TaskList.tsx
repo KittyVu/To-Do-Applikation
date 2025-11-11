@@ -3,16 +3,20 @@ import TaskItem from "./TaskItem";
 
 export default function TaskList() {
   const { tasks, searchQuery, filterStatus } = useTasksContext();
-
+  
+  // if no search no filter, return full array
   const filteredTasks = tasks.filter((task) => {
+     // if having search
     const matchesSearch =
       task.titel.toLowerCase().includes(searchQuery.toLowerCase()) ||
       task.beschreibung.toLowerCase().includes(searchQuery.toLowerCase());
+
+    // if having filter
     const matchesFilter = filterStatus ? task.status === filterStatus : true;
     return matchesSearch && matchesFilter;
   });
 
-  if (filteredTasks.length === 0) return <p className="text-gray-500">No tasks found.</p>;
+  if (filteredTasks.length === 0) return <p className="text-gray-500">Keine Aufgaben gefunden.</p>;
 
   return (
     <div className="space-y-3">

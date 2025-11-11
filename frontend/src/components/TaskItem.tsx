@@ -8,20 +8,21 @@ export default function TaskItem({ task }: { task: TaskType }) {
   const { deleteTask, updateTask, setEditingTask, setEditTitel, setEditBeschreibung, setEditStatus } = useTasksContext();
 
   const handleMark = () => {
-    if (task.status !== "erledigt" && window.confirm("Mark this task as erledigt?")) {
+    if (task.status !== "erledigt" && window.confirm("Markiert diesen Task erledigt?")) {
       updateTask(task.id!, { ...task, status: "erledigt" });
     }
   };
 
   const handleEdit = () => {
-    setEditingTask(task);
+    setEditingTask(task); // set value to check showing edit form or not?
+
     setEditTitel(task.titel);
     setEditBeschreibung(task.beschreibung);
     setEditStatus(task.status);
   };
 
   const handleDelete = () => {
-    if (window.confirm("Delete this task?")) deleteTask(task.id!);
+    if (window.confirm("Löschen diesen Task?")) deleteTask(task.id!);
   };
 
   return (

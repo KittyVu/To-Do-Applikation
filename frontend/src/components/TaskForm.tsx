@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTasksContext } from "../context/TaskContext";
 
 export default function TaskForm() {
-  const { addTask } = useTasksContext();
+  const { addTask } = useTasksContext(); // get from Context
   const [titel, setTitel] = useState("");
   const [beschreibung, setBeschreibung] = useState("");
   const [status, setStatus] = useState("offen");
@@ -10,6 +10,7 @@ export default function TaskForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     addTask(titel, beschreibung, status);
+    // return empty input
     setTitel("");
     setBeschreibung("");
     setStatus("offen");
@@ -19,7 +20,7 @@ export default function TaskForm() {
     <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 mb-6">
       <input
         type="text"
-        placeholder="Add new task..."
+        placeholder="Neue Aufgabe hinzufügen..."
         value={titel}
         onChange={(e) => setTitel(e.target.value)}
         required
@@ -27,7 +28,7 @@ export default function TaskForm() {
       />
       <input
         type="text"
-        placeholder="Add Beschreibung..."
+        placeholder="Beschreibung hinzufügen..."
         value={beschreibung}
         onChange={(e) => setBeschreibung(e.target.value)}
         className="flex-1 px-4 py-2 bg-[#F0F0F0] text-blue-800 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
@@ -36,7 +37,7 @@ export default function TaskForm() {
         type="submit"
         className="bg-blue-500 w-full sm:w-24 text-white py-2 rounded-lg hover:bg-blue-700 transition"
       >
-        Add
+        Hinzufügen
       </button>
     </form>
   );
