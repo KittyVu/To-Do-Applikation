@@ -83,6 +83,13 @@ Der Frontend-Server läuft standardmäßig auf:
 👉 http://localhost:5173/ 
 ```
 
+# Docker 
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+
+- A docker image is build, and to initialize the docker container:  `docker compose up --build -d`
+- Then open browser and start with url: `http://localhost:5173/` to run some tests. 
+
 ## 👩‍💻 Autor
 ### Xuyen Vu
 - 📧 asthrough@gmail.com
